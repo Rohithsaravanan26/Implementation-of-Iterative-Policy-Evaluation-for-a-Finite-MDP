@@ -165,6 +165,7 @@ env.close()
 ## Output
 
 ```text
+FOR GAMMMA 0.99:
 Name: ROHITH S 
 Register Number:  212225240121
 Number of iterations: 54
@@ -180,6 +181,22 @@ State-Value Function as 4x4 Grid:
  [0.0326 0.0843 0.1378 0.    ]
  [0.     0.1703 0.4336 0.    ]]
 
+FOR GAMMA : 0.90
+Name: ROHITH S 
+Register Number:  212225240121
+Number of iterations: 38
+
+State-Value Function:
+[0.00447724 0.00422245 0.01006675 0.00411821 0.00672195 0.
+ 0.02633371 0.         0.01867615 0.05760701 0.10697195 0.
+ 0.         0.13038305 0.39149016 0.        ]
+
+State-Value Function as 4x4 Grid:
+[[0.0045 0.0042 0.0101 0.0041]
+ [0.0067 0.     0.0263 0.    ]
+ [0.0187 0.0576 0.107  0.    ]
+ [0.     0.1304 0.3915 0.    ]]
+
 ```
 ---
 
@@ -188,6 +205,12 @@ State-Value Function as 4x4 Grid:
 Iterative policy evaluation was implemented successfully using the Gymnasium FrozenLake environment. The state-value function for the fixed random policy was estimated using the Bellman expectation equation.
 
 ---
+
+
+## Inference
+Iterative policy evaluation was successfully performed in the FrozenLake environment using a uniform random policy. The state-value function converged after repeated updates using the Bellman expectation equation. States closer to the goal generally have higher values, while hole states and terminal states have a value of zero. When the discount factor (\(\gamma\)) decreases from 0.99 to 0.90, the estimated state values generally decrease because future rewards receive less importance. Thus, the experiment demonstrates how policy evaluation estimates the expected return for each state under a fixed policy.
+
+```
 
 
 
